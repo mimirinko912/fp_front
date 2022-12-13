@@ -1,18 +1,15 @@
-# importing the eel library
+# importing library
 import eel
-# initializing the application
+# initialize
 eel.init("../fp_front")
 
-# using the eel.expose command
 @eel.expose
-# defining the function for addition of two numbers
-def add(data_1, data_2):
-    int1 = int(data_1)
-    int2 = int(data_2)
-
+# below should be our model
+def pred(name,fy,city,nation,industry,founder,investory,tf,ct,os,ls):
+    frame = name,fy,city,nation,industry,founder,investory,tf,ct,os,ls
     #print(int1,int2) success get :) ^\0m0/^
-    output = int1 + int2
+    output = "here should be prediction"
     return output
 
-# starting the application
+# start
 eel.start('myWebpage.html')
