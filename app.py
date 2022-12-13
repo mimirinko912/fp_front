@@ -1,7 +1,7 @@
 # importing the eel library
 import eel
 # initializing the application
-eel.init("../myWeb")
+eel.init("../fp_front")
 
 # using the eel.expose command
 @eel.expose
