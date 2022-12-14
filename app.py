@@ -60,7 +60,7 @@ def pred(name,fy,city,nation,industry,founder,investory,tf,ct,os,ls):
     investory: dict = {'andreessen horowitz': 0, 'techstars': 1, 'alumni ventures': 2, 'y combinator': 3, 'sequoia capital': 4, '500 global': 5, 'insight partners': 6}
 
     #last valuation
-    ls
+    last_valuation_value = ("".join(ls)).__len__()-1
 
     output = "here should be prediction"
     return output
