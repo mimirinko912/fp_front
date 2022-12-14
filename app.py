@@ -13,15 +13,6 @@ def count_special_char(name: str) -> int:
 
 	return special_char_count
 
-def valuation_mapping(valuation: int) -> int:
-	half = sqrt(10)
-	scientific: list = '{:e}'.format(valuation).split('e')
-	tail: float = float(scientific[0])
-	power: int = int(scientific[1])
-	if tail >= half:
-		power += 1
-
-	return power
 
 eel.init("../fp_front")
 
@@ -45,10 +36,10 @@ def pred(name,fy,city,nation,industry,founder,investory,tf,ct,os,ls):
     #country name
     country_n = ("".join(nation)).lower()
     country_value = 0
-    if city_name == "united states":
-        city_value = 0
-    elif city_name == "china":
-        city_value = 1
+    if country_n == "united states":
+        country_value = 0
+    elif country_n == "china":
+        country_value = 1
 
     #city
     city_name = ("".join(city)).lower()
@@ -65,11 +56,11 @@ def pred(name,fy,city,nation,industry,founder,investory,tf,ct,os,ls):
     industry: dict = {'artificial intelligence': 0, 'fintech': 1, 'internet software & services': 2, 'analytics': 3, 'biotechnology': 4, 'health care': 5, 'e-commerce & direct-to-consumer': 6}
 
     #this sould be button or scroll to choose
-    investor_type = ("".join(investor)).lower()
-    investor: dict = {'andreessen horowitz': 0, 'techstars': 1, 'alumni ventures': 2, 'y combinator': 3, 'sequoia capital': 4, '500 global': 5, 'insight partners': 6}
+    investor_type = ("".join(investory)).lower()
+    investory: dict = {'andreessen horowitz': 0, 'techstars': 1, 'alumni ventures': 2, 'y combinator': 3, 'sequoia capital': 4, '500 global': 5, 'insight partners': 6}
 
     #last valuation
-    last_value = ls.map(valuation_mapping)
+    ls
 
     output = "here should be prediction"
     return output
